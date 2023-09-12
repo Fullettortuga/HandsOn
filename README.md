@@ -1,0 +1,7 @@
+# HandsOns en Administració i Virtualització de Sistemes
+
+Aquest material és una guia completa i pràctica que t'acompanyarà en el món de l'administració i la virtualització de sistemes informàtics. Cobrint des dels fonaments tradicionals fins a les implementacions avançades i els desplegaments a la núvol, aquesta guia està dissenyada per ajudar-te a desenvolupar habilitats essencials en la gestió de sistemes i la creació d'entorns virtuals eficients.
+
+L'administració de sistemes i la virtualització són àrees crucials per a qualsevol persona interessada en la tecnologia de la informació. Les empreses i les organitzacions estan constantment cercant experts en aquest camp per optimitzar els seus recursos, millorar la seguretat i augmentar l'eficiència. Aquest material té com a objectiu inspirar i capacitar els estudiants perquè es converteixin en professionals capaços de gestionar sistemes amb èxit i crear entorns virtuals robustos.
+
+Aquest material és de codi obert i podeu col·laborar-hi, complementar-lo o corregir-lo mitjançant peticions de tirada (pull requests) al repositori. L'objectiu és estendre'n la seva funcionalitat i millorar-ne l'explicació. La vostra contribució és fonamental per fer-lo més complet i útil per a tots els usuaris interessats en l'administració i la virtualització de sistemes informàtics. Ens encantaria veure com la comunitat col·labora per fer créixer aquest recurs. Gràcies per la vostra participació activa!

@@ -1,0 +1,12 @@
+[book]
+authors = ["JordiMateoUdL"]
+language = "ca"
+multilingual = false
+src = "src"
+title = "HandsOns en Administració i Virtualització de Sistemes"
+
+[output.html.playground]
+editable = true
+
+[output.html.code.hidelines]
+sh = "~"
