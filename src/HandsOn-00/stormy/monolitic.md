@@ -26,19 +26,19 @@ En la primera etapa del projecte, optem per una solució senzilla amb una config
 
 ### Aconseguint una imatge Rocky Linux
 
-Comencem a aconseguir el sistema operatiu Rocky Linux, una distribució Linux robusta i de codi obert que utilitzarem com a base per al nostre servidor web. Aquesta elecció es deu a la seva fiabilitat i a la seva compatibilitat amb tecnologies web com Apache, PHP i MariaDB.
+Seleccionem el sistema operatiu Rocky Linux, una distribució Linux robusta i de codi obert que utilitzarem com a base per al nostre servidor web. Aquesta elecció es deu a la seva fiabilitat i a la seva compatibilitat amb tecnologies web com Apache, PHP i MariaDB.
 
 Per fer-ho a la plataforma que emula un cloud privat (*stormy*) seguirem els següents passos:
 
-1. Fes clic a l'opció "Apps".
-2. Cerca "Rocky" a la barra de cerca.
-3. Selecciona la opció corresponent a "Rocky".
+1. Fes clic a l'opció **Apps**.
+2. Cerca **Rocky** a la barra de cerca.
+3. Selecciona la opció corresponent a **Rocky**.
 4. Feu clic per iniciar la descàrrega.
 
 ![Descripció visual dels passos.](../figs/ho00/rocky/step1.png)
 
 1. Escull l'opció que es correspongui amb *115 ceph01-images*.
-2. Fes clic a "Descarregar" o "Baixar".
+2. Fes clic a **Descarregar** o **Baixar**.
 
 ![Descripció visual dels passos.](../figs/ho00/rocky/step3.png)
 
@@ -55,7 +55,7 @@ Sempre heu de fer servir el **datastore** *115* del laboratori.
 
 ### Preparant el Sistema Operatiu
 
-Un cop creada la màquina virtual, actualitzem el sistema operatiu mitjançant la comanda "dnf -y update" per garantir que disposem de les últimes actualitzacions de seguretat i correccions. És molt important com a administrador de sistemes tenir el sistema operatiu actualitzat. Per tant, és una bona pràctica iniciar la configuració actualitzant el sistema.
+Un cop creada la màquina virtual, actualitzem el sistema operatiu mitjançant la comanda següent per garantir que disposem de les últimes actualitzacions de seguretat i correccions. És molt important com a administrador de sistemes tenir el sistema operatiu actualitzat. Per tant, és una bona pràctica iniciar la configuració actualitzant el sistema.
 
 ```sh
  dnf -y update
@@ -98,7 +98,7 @@ systemctl start httpd
 systemctl status httpd
 ```
 
-Aquesta comanda (```systemctl status x```)mostra l'estat d'un servei de sistema anomenat **x**. Ens mostrarà l'estat actual del servei **x**, indicant si està en execució (en estat "RUNNING") o no, així com altres informacions rellevants que poden ser útils per a la supervisió i el diagnòstic.
+Aquesta comanda (```systemctl status x```) mostra l'estat d'un servei de sistema anomenat **x**. Ens mostrarà l'estat actual del servei **x**, indicant si està en execució (en estat **RUNNING**) o no, així com altres informacions rellevants que poden ser útils per a la supervisió i el diagnòstic.
 
 Què passarà si executo com a admin ```systemctl disable httpd; reboot; systemctl status httpd```?
 
@@ -106,7 +106,7 @@ Què passarà si executo com a admin ```systemctl disable httpd; reboot; systemc
 
 * ```reboot```: Aquesta comanda reiniciarà el sistema.
 
-* ```systemctl status httpd```: Un cop s'hagi reiniciat el sistema, aquesta comanda mostrarà l'estat del servei Apache. En aquest punt, el servei estarà aturat, i veuràs que indica que està "inactive" o "dead".
+* ```systemctl status httpd```: Un cop s'hagi reiniciat el sistema, aquesta comanda mostrarà l'estat del servei Apache. En aquest punt, el servei estarà aturat, i veuràs que indica que està **inactive** o **dead**.
 
 Per utilitzar el servei Apache després d'aquestes comandes, hauràs de fer-ho manualment amb ```systemctl start httpd```, ja que no es reiniciarà automàticament amb el sistema. Així que si desitges utilitzar Apache després d'un reinici, hauràs de recordar iniciar-lo manualment.
 
@@ -144,14 +144,14 @@ La configuració del **firewall** és crucial per garantir la seguretat i la pro
 Primer, instal·leu el servei *firewalld* al vostre sistema. El servei *firewalld* proporciona una interfície de configuració del **firewall** per gestionar les regles de les zones de seguretat.
 
 ```sh
-~dnf install -y firewalld
+~ dnf install -y firewalld
 ```
 
 Segon, habiliteu el servei *firewalld* perquè s'iniciï automàticament en l'arrencada del sistema i l'inicieu immediatament.
 
 ```sh
-~systemctl enable firewalld
-~systemctl start firewalld
+~ systemctl enable firewalld
+~ systemctl start firewalld
 ```
 
 Si intenteu reaccedir utilitzant el navegador, observareu que ara no és possible (**ERR_CONNECTION_REFUSED**). Per poder accedir-hi de nou, heu de crear una regla al **firewall** per permetre el tràfic. A continuació, afegiu una regla de **firewall** per permetre el tràfic *HTTP* a través del port *80*. 
@@ -242,17 +242,17 @@ mysql_secure_installation
 7. Reload privilege tables now? Y
 ```
 
-*Enter current password for root (enter for none)*: En aquest punt, si és la primera vegada que configureu MariaDB, premeu simplement Enter, ja que encara no hi ha contrasenya establerta per a l'usuari "root".
+*Enter current password for root (enter for none)*: En aquest punt, si és la primera vegada que configureu MariaDB, premeu simplement Enter, ja que encara no hi ha contrasenya establerta per a l'usuari **root**.
 
-*Set root password? (Y/n)*: Respongueu "Y" per indicar que voleu establir una contrasenya per a l'usuari "root" de MariaDB. A continuació, introduïu la nova contrasenya quan se us demani, per exemple (1234).
+*Set root password? (Y/n)*: Respongueu **Y** per indicar que voleu establir una contrasenya per a l'usuari **root** de MariaDB. A continuació, introduïu la nova contrasenya quan se us demani, per exemple (1234).
 
-*Remove anonymous users? (Y/n)*: Respongueu "Y" per eliminar els usuaris anònims. Això millora la seguretat del sistema, ja que no permet connexions no autenticades.
+*Remove anonymous users? (Y/n)*: Respongueu **Y** per eliminar els usuaris anònims. Això millora la seguretat del sistema, ja que no permet connexions no autenticades.
 
-*Disallow root login remotely? (Y/n)*: Respongueu "Y" per desactivar l'inici de sessió remot per a l'usuari "root". Això significa que l'usuari "root" només podrà iniciar sessió des de la màquina local.
+*Disallow root login remotely? (Y/n)*: Respongueu **Y** per desactivar l'inici de sessió remot per a l'usuari **root**. Això significa que l'usuari **root** només podrà iniciar sessió des de la màquina local.
 
-*Remove test database and access to it? (Y/n)*: Respongueu "Y" per eliminar la base de dades de proves i l'accés a ella. Això elimina les bases de dades i els usuaris de prova, augmentant encara més la seguretat.
+*Remove test database and access to it? (Y/n)*: Respongueu **Y** per eliminar la base de dades de proves i l'accés a ella. Això elimina les bases de dades i els usuaris de prova, augmentant encara més la seguretat.
 
-*Reload privilege tables now? (Y/n)*: Respongueu "Y" per recarregar les taules de privilegis de MariaDB. Això assegura que els canvis de configuració es facin efectius de seguida.
+*Reload privilege tables now? (Y/n)*: Respongueu **Y** per recarregar les taules de privilegis de MariaDB. Això assegura que els canvis de configuració es facin efectius de seguida.
 
 Per a iniciar sessió al sistema de gestió de bases de dades MariaDB, utilitza la següent comanda. Aquesta comanda us demanarà la contrasenya que heu establert durant la instal·lació de MariaDB.
 
@@ -294,7 +294,7 @@ L'ús de versions més recents de PHP ofereix molts avantatges, com ara un millo
 
 ```dnf module reset php```: Aquesta comanda restableix el mòdul PHP a la configuració per defecte. Això significa que deixarà d'utilitzar la versió actual de PHP i tornarà a la versió per defecte del sistema.
 
-```php -v``p: Aquesta comanda mostra la versió actual de PHP que està instal·lada al sistema. Després d'haver realitzat les operacions correctes, hauria de mostrar la versió 7.4 de PHP.
+```php -v```: Aquesta comanda mostra la versió actual de PHP que està instal·lada al sistema. Després d'haver realitzat les operacions correctes, hauria de mostrar la versió 7.4 de PHP.
 
 ```sh
 dnf module install php:7.4 -y
@@ -391,7 +391,7 @@ Aquests complements proporcionen eines que faciliten la configuració i la gesti
 Ara, configura les etiquetes SELinux adequades per a la carpeta de WordPress. Utilitza aquesta comanda per fer-ho:
 
 ```sh
-semanage fcontext -a -t httpd_sys_rw_content_t "/var/www/html/wordpress(/.*)?"
+semanage fcontext -a -t httpd_sys_rw_content_t **/var/www/html/wordpress(/.*)?**
 ```
 
 Aquesta comanda especifica que els fitxers i directoris dins de /var/www/html/wordpress haurien de tenir l'etiqueta SELinux httpd_sys_rw_content_t, que permet a Apache escriure-hi. Finalment, aplica les etiquetes SELinux configurades amb la següent comanda:
@@ -446,7 +446,7 @@ Per realitzar aquesta previsualització, seguiu aquests passos:
 
 1. Inicieu sessió com a administrador al panell d'administració de WordPress.
 2. Feu clic a la vostra foto d'usuari o nom d'usuari a la part superior dreta de la pàgina per accedir al vostre perfil d'usuari.
-3. A la part inferior del vostre perfil, hi haurà una opció per "Tancar sessió" o "Sortir". Feu clic en aquesta opció per desconnectar-vos de l'administrador.
+3. A la part inferior del vostre perfil, hi haurà una opció per **Tancar sessió** o **Sortir**. Feu clic en aquesta opció per desconnectar-vos de l'administrador.
 
 Un cop hàgiu tancat la sessió com a administrador, podeu visitar el vostre lloc web en una finestra de navegació de mode d'incògnit o en la qual no hàgiu iniciat sessió com a usuari. Això us permetrà veure com es veu el lloc web per als visitants normals i comprovar que tot està com voleu abans de fer-ho públic.
 
