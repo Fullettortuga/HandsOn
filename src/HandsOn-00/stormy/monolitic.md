@@ -392,7 +392,6 @@ Ara, configura les etiquetes SELinux adequades per a la carpeta de WordPress. Ut
 
 ```sh
 semanage fcontext -a -t httpd_sys_rw_content_t '/var/www/html/wordpress(/.*)?'
-
 ```
 
 Aquesta comanda especifica que els fitxers i directoris dins de /var/www/html/wordpress haurien de tenir l'etiqueta SELinux httpd_sys_rw_content_t, que permet a Apache escriure-hi. Finalment, aplica les etiquetes SELinux configurades amb la següent comanda:
