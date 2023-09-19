@@ -8,7 +8,7 @@ Podeu optar per desplegar les rèpliques de forma manual, creant dos nous servid
 
 Utilitzant els coneixements adquirits en el **Lab01**, podeu automatitzar la creació de rèpliques amb Ansible. 
 
-**Requeriments previs**: Instal·lació d'ansible [Com instal·lar ansible]().
+**Requeriments previs**: Instal·lació d'ansible [Com instal·lar ansible](https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.html).
 
 
 
