@@ -14,7 +14,7 @@
   - [Reptes](./HandsOn-00/stormy/reptes.md)
 
 
-# HandsOn-01: Balacejant la càrrega
+# HandsOn-01: Balancejant la càrrega
 
 - [Descripció](./HandsOn-01/intro.md)
 - [Repliques](./HandsOn-01/repliques.md)
