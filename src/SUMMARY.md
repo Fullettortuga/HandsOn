@@ -12,3 +12,12 @@
 - [Stormy]()
   - [Desplegament Monolític](./HandsOn-00/stormy/monolitic.md)
   - [Reptes](./HandsOn-00/stormy/reptes.md)
+
+
+# HandsOn-01: Balacejant la càrrega
+
+- [Descripció](./HandsOn-01/intro.md)
+- [Repliques](./HandsOn-01/repliques.md)
+- [Balanceig](./HandsOn-01/balanceig.md)
+- [Scripting](./HandsOn-01/scripting.md)
+- [Reptes](./HandsOn-01/reptes.md)
