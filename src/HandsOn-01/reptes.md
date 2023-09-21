@@ -1,5 +1,7 @@
 # Reptes
 
+* Configureu el servidor activant el SELinux.
+
 * Garantim que es comprovi si la variable **TARGET_IP** té el port de WordPress (port 80) obert i accessible. En cas contrari, l'script ha d'aturar-se i indicar que el port necessari no està disponible.
 
 * Modifica el script **check.sh** per aconseguir estadístiques en temps real sobre les peticions als servidors. L'objectiu és mostrar una sortida semblant a:

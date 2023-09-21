@@ -145,3 +145,9 @@ Finalment reiniciem NGINX per aplicar els canvis:
 ```sh
 ~ systemctl restart nginx
 ```
+
+**Nota**: Desactiveu el SELinux:
+
+```sh
+setenforce 0
+```
