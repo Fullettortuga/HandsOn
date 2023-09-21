@@ -5,6 +5,7 @@
 - [Introducció](./readme/intro.md)
 - [Crèdits](./readme/credits.md)
 - [Contribuïr](./readme/contribute.md)
+- [Consells](./readme/tips.md)
   
 # HandsOn-00: Desplegant un Wordpress
 
