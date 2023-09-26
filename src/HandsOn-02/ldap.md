@@ -43,37 +43,43 @@ REQUIRED SOFTWARE
 * Instal·lació del compilador C:
 
 ```sh
-~ dnf install gcc -y
+~dnf install gcc -y
 ```
 
 * Instal·lació de Cyrus SASL.:
 
 ```sh
-~ dnf install cyrus-sasl-devel  -y
+~dnf install cyrus-sasl-devel  -y
 ```
 
 * Instal·lació OpenSSL:
 
 ```sh
-~ dnf install openssl-devel -y
+~dnf install openssl-devel -y
 ```
 
 * Instal·lació de libevent:
 
 ```sh
-~ dnf install libevent-devel -y
+~dnf install libevent-devel -y
 ```
 
 * Instal·lació de libsodium:
 
 ```sh
-~ dnf install libsodium-devel -y
+~dnf install libsodium-devel -y
 ```
 
 * Instal·lació de Software POSIX REGEX:
 
 ```sh
-~ dnf install pcre-devel -y
+~dnf install pcre-devel -y
+```
+
+* Instal·lació de Perl:
+
+```sh
+~dnf install perl perl-devel -y
 ```
 
 * **Eines de Configuració**: Adicionalment instal·larem eines que ens ajudin en la instal·lació i configuració.
@@ -846,7 +852,7 @@ auth_provider = ldap
 chpass_provider = ldap
 access_provider = ldap
 sudo_provider = ldap
-ldap_uri = ldaps://ldap.asv.udl.cat"
+ldap_uri = ldaps://ldap.asv.udl.cat
 ldap_default_bind_dn = cn=osproxy,ou=system,dc=asv,dc=udl,dc=cat
 ldap_group_search_base = ou=groups,dc=asv,dc=udl,dc=cat
 ldap_user_search_base = ou=users,dc=asv,dc=udl,dc=cat
