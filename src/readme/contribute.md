@@ -1,11 +1,19 @@
+# Contribueix
+
+Aquest material és de codi obert i podeu col·laborar-hi, complementar-lo o corregir-lo mitjançant **pull requests** al repositori. L'objectiu és estendre'n la seva funcionalitat i millorar-ne l'explicació. La vostra contribució és fonamental per fer-lo més complet i útil per a tots els usuaris interessats. M'encantaria veure com colaboreu tots en aquest projecte. Recordeu que la col·laboració activa és **0.5 punts extra a la nota final.**
+
+L'enllaç al repositori és:
+[https://github.com/102378-ASV/HandsOn](https://github.com/102378-ASV/HandsOn)
+
 # Instruccions per contribuïr
 
-* **Fork el repositori**: Ves al repositori del projecte al qual vols contribuir i fes clic al botó "Fork" a la part superior dreta de la pàgina. Això crearà una còpia del repositori al teu compte de GitHub.
+* **Fork el repositori**: Fes clic al botó **Fork** a la part superior dreta de la pàgina. Això crearà una còpia del repositori al teu compte de GitHub. Veure imatge:
 
-* **Clona el teu repositori a la teva màquina**: Utilitza Git per clonar el teu repositori a la teva màquina local. Pots fer-ho amb la comanda següent, reemplaçant <URL_DEL_TEU_REPO> per l'URL del teu repositori:
+* **Clona el repositori a la teva màquina**: Utilitza Git per clonar el repositori que has clonat a la teva màquina.
 
 ```bash
-git clone <URL_DEL_TEU_REPO>
+git clone https://github.com/X/HandsOn.git
+# X és el teu nom d'usuari de GitHub
 ```
 
 * **Crea una branca (branch) nova**: Abans de fer canvis, crea una branca nova on faràs les teves modificacions. Això ajuda a mantenir les coses ordenades. Utilitza la comanda següent:
@@ -16,14 +24,9 @@ git checkout -b nom_de_la_branca
 
 * Fes els canvis: Realitza les modificacions necessàries en els fitxers del projecte.
 
-* Afegeix i commiteja els canvis: Utilitza els següents comandos per afegir els canvis i fer un commit:
+* Afegeix i commiteja els canvis: Utilitza els següents comandos per afegir els canvis i fer un commit.
 
-```bash
-git add .
-git commit -m "Descripció dels canvis"
-```
-
-* Puja els canvis al teu repositori a GitHub: Pots fer-ho amb la comanda següent, reemplaçant <nom_de_la_branca> pel nom de la branca on has fet els canvis:
+* Puja els canvis al teu repositori a GitHub amb la comanda següent:
 
 ```bash
 git push origin nom_de_la_branca
@@ -32,5 +35,7 @@ git push origin nom_de_la_branca
 * **Crea una PR**: Vés al teu repositori a GitHub i selecciona la branca on has fet els canvis. Apareixerà un missatge destacat dient que has fet una nova branca. Fes clic a "Compare & pull request" per començar la PR.
 
 * Proporciona una descripció detallada dels canvis que has fet. A més, pots afegir captures de pantalla o informació addicional per ajudar els revisors a entendre els teus canvis.
+
+* Indica el meu repositori (on vols enviar les modificacions) i indica el teu fork (on has fet les modificacions). Assegura't de seleccionar la branca amb les modificacions. Finalment, fes clic a **Create pull request**. 
 
 * **Envia la PR**: Un cop hagis omplert tota la informació, fes clic al botó "Create pull request" per enviar la PR al projecte original.
