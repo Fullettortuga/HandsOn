@@ -5,7 +5,7 @@ Aquest material és de codi obert i podeu col·laborar-hi, complementar-lo o cor
 L'enllaç al repositori és:
 [https://github.com/102378-ASV/HandsOn](https://github.com/102378-ASV/HandsOn)
 
-# Instruccions per contribuïr
+## Instruccions per contribuïr
 
 * **Fork el repositori**: Fes clic al botó **Fork** a la part superior dreta de la pàgina. Això crearà una còpia del repositori al teu compte de GitHub. Veure imatge:
 
