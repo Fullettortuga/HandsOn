@@ -22,3 +22,7 @@
 - [Balanceig](./HandsOn-01/balanceig.md)
 - [Scripting](./HandsOn-01/scripting.md)
 - [Reptes](./HandsOn-01/reptes.md)
+
+# HandsOn-02: Gestió de comptes
+- [Lord of the system](./HandsOn-02/lord.md)
+- [Autenticació centralitzada](./HandsOn-02/ldap.md)
