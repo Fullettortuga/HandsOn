@@ -930,10 +930,10 @@ Per testar la configuració del client crearem un directori */home/jordi* i l'as
 
 ```sh
 mkdir /home/jordi
-chown 5000:5001 /home/jordi
+chown 4000:5000 /home/jordi
 ```
 
-Si revisem les propietats veurem que el sistema detecta l'usuari amb jordi i programadors que són els **uid** i **gid** del usuari amb 5000 i 5001 definits a *LDAP*.
+Si revisem les propietats veurem que el sistema detecta l'usuari amb jordi i programadors que són els **uid** i **gid** del usuari amb 4000 i 5000 definits a *LDAP*.
 
 ```sh
 ls -l /home
