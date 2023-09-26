@@ -85,7 +85,7 @@ dnf install make autoconf libtool vim tar wget -y
 Finalment podem instal·lar extres com:
 
 ```sh
-dnf install clibtool-ltdl-devel libdb-devel -y
+dnf install libtool-ltdl-devel libdb-devel -y
 ```
 
 També podem afegir el repositori epel-release-7:

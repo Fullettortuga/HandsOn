@@ -177,13 +177,13 @@ o bé podeu fer servir (*gpasswd*):
 * L'usuari **gollum** vol tenir el seu *home* amb el nom **smeagol**.
 
 ```sh
-~ usermod -d /home/smeagol -m gollum
+~ usermod -d /home/smeagol -m gollum
 ```
 
 * L'usuari **legolas** vol tenir per defecte la *shell tcsh*.
 
 ```sh
-~ usermod -s /bin/tcsh legolas
+~ usermod -s /bin/tcsh legolas
 ```
 
 * L'usuari **gimli** no vol tenir *contrasenya*.
