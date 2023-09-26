@@ -846,16 +846,16 @@ offline_credentials_expiration = 60
 [domain/default]
 ldap_id_use_start_tls = True
 cache_credentials = True
-ldap_search_base = dc=asv,dc=udl,dc=cat
+ldap_search_base = dc=curs,dc=asv,dc=udl,dc=cat
 id_provider = ldap
 auth_provider = ldap
 chpass_provider = ldap
 access_provider = ldap
 sudo_provider = ldap
 ldap_uri = ldaps://ldap.asv.udl.cat
-ldap_default_bind_dn = cn=osproxy,ou=system,dc=asv,dc=udl,dc=cat
-ldap_group_search_base = ou=groups,dc=asv,dc=udl,dc=cat
-ldap_user_search_base = ou=users,dc=asv,dc=udl,dc=cat
+ldap_default_bind_dn = cn=osproxy,ou=system, dc=curs,dc=asv,dc=udl,dc=cat
+ldap_group_search_base = ou=groups,dc=curs,dc=asv,dc=udl,dc=cat
+ldap_user_search_base = ou=users,dc=curs,dc=asv,dc=udl,dc=cat
 ldap_default_authtok = 1234
 ldap_tls_reqcert = demand
 ldap_tls_cacert = /etc/pki/tls/cacert.crt
@@ -872,8 +872,8 @@ EOL
 ```sh
 vim /etc/openldap/ldap.conf
 # Modificacions
-BASE dc=curs,dc=asv,dc=udl,dc=cat
 URI ldaps://curs.asv.udl.cat
+BASE  dc=curs,dc=asv,dc=udl,dc=cat
 TLS_CACERT      /etc/pki/tls/cacert.crt
 ```
 
@@ -933,16 +933,11 @@ mkdir /home/jordi
 chown 5000:5001 /home/jordi
 ```
 
-Si revisem les propietats veurem que el sistema no detecta aquest usuari i grup definit al *LDAP*.
+Si revisem les propietats veurem que el sistema detecta l'usuari amb jordi i programadors que són els **uid** i **gid** del usuari amb 5000 i 5001 definits a *LDAP*.
 
 ```sh
 ls -l /home
-```
-
-Però, quan activem ```authconfig --updateall --enableldap --enableldapauth``` i tornem a revisar hauriam de veure jordi i programadors que són els uid i gid dels usuaris *LDAP*.
-
-```sh
-ls -l /home
+drwxr-xr-x.  2 jordi programadors   6 Sep 26 18:36 jordi
 ```
 
 ## Solució de problemes
