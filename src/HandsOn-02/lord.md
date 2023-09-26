@@ -94,7 +94,7 @@ Finalment, tornem a iniciar sessió **SSH**. Per veure el nostre banner.
 Per podeu veure el banner, s'ha d'editar la configuració del servei SSH:
 
 ```sh
-vim /etc/sshd/sshd_config
+vim /etc/ssh/sshd_config
 # Descomentar 
 Banner /etc/issue.net
 # Guardar i sortir
@@ -120,7 +120,7 @@ groupadd [opcions] nom_del_grup
 |mags| 900|
 
 ```sh
-~ groupadd -g 600 hobbits 
+groupadd -g 600 hobbits 
 groupadd -g 700 elfs 
 groupadd -g 800 nans 
 groupadd -g 900 mags
