@@ -23,7 +23,7 @@ en la Tierra de Mordor donde se extienden las Sombras
 
 ## Preparant el servidor
 
-1. Crear una MV amb el nom **middle-earth** amb el SO base Rocky Linux. **(1 CPU, 500MB de RAM, 4GB de disc)**.
+1. Crear una MV amb el nom **middle-earth** amb el SO base Rocky Linux. **(1 CPU, 1GB de RAM, 4GB de disc)**.
 2. Actualitzar totes les llibreries amb ```dnf update -y```.
 3. Instal·lar un editor de text (vim o nano) amb ```dnf install vim -y```.
 4. Instal·lar la shell tcsh amb ```dnf install tcsh -y```.

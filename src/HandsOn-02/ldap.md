@@ -755,7 +755,7 @@ firewall-cmd --reload
 ### Preparant el servidor
 
 * Podeu utlitzar una de les repliques de Wordpress.
-* Si configureu una nova màquin: **ldap-client** amb el SO base Rocky Linux. **(1 CPU, 500MB de RAM, 4GB de disc)**.
+* Si configureu una nova màquin: **ldap-client** amb el SO base Rocky Linux. **(1 CPU, 1GB de RAM, 4GB de disc)**.
 
 #### Al client (ldap-client)
 
