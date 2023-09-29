@@ -58,8 +58,6 @@ El **RAID 5** permet tenir almenys tres discs durs i només un d'ells s'utilitza
 
 **OBSERVACIÓ**: La paritat només s'utilitza per a l'arrencada en les operacions de lectura. En les operacions d'escriptura, la paritat es recalcula i s'escriu en la seva posició corresponent.
 
-Si **/dev/sdb1** falla es pot reconstruir:
-
 ## Instal·lació a Rocky Linux
 
 Per poder utilitzar les RAIDs hem d'instal·lar el següent paquet a Rocky Linux 8:
@@ -725,3 +723,12 @@ done
     dd if=/dev/zero of=/dev/vb2 count=10 bs=1M
     dd if=/dev/zero of=/dev/vb4 count=10 bs=1M
     ```
+
+## Reptes
+
+1. Configura un **RAID5** utilitzant 5 particions (extended), cadascuna amb una grandària de 100MB. Munta el RAID5 a */mnt/data*.
+2. Aquest **RAID5** estarà dedicat a l'emmagatzematge de dades, sense permisos per executar programes, permetent únicament llegir i escriure fitxers.
+3. Crea l'usuari chuck i estableix la seva quota d'emmagatzematge en 50MB.
+4. Utilitza LUKS per xifrar les particions utilitzades en el RAID5.
+
+Per optar al 10 en aquests reptes, documenteu les vostres accions utilitzant format markdown en aquest fitxer i feu una **pull request** al repositori original.
