@@ -1,4 +1,3 @@
-# Summary
 
 # README
 
@@ -27,9 +26,9 @@
 - [Lord of the system](./HandsOn-02/lord.md)
 - [Autenticació centralitzada](./HandsOn-02/ldap.md)
 
-# Emmagatzematge
+# HandsOn-03: Emmagatzematge
 
 - [Sistema de fitxers](./HandsOn-03/sistema_fitxers.md)
+- [Eines de xifratge](./HandsOn-03/xifratge.md)
 - [Sistema de fitxers distribuït](./HandsOn-03/sistema_fitxers_distribuit.md)
 - [RAIDs](./HandsOn-03/raids.md)
-- [LVM](./HandsOn-03/lvm.md)
