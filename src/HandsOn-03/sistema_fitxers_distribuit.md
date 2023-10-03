@@ -212,6 +212,5 @@ done
 
 1. Configureu el client per fer servir automount i autenticació centralitzada amb el servidor LDAP.
 2. Prepareu amb Ansible scripts per automatitzar la creació del servidor i del client NFS.
-3. Estableix un sistema de monitoratge per al teu servidor i client NFS, utilitzant eines com Nagios o Prometheus.
-4. Implementa una rèplica de servidors NFS per assegurar alta disponibilitat i tolerància a errors.
-5. Optimitza el rendiment del teu sistema NFS, investigant i aplicant les millores necessàries.
+3. Estableix un sistema de monitoratge per al teu servidor i client NFS, utilitzant [Prometheus](https://prometheus.io/).
+4. Implementa una rèplica de servidors NFS per assegurar alta disponibilitat i tolerància a errors podeu consultar [Distributed Replicated Block Device](https://linbit.com/drbd/).

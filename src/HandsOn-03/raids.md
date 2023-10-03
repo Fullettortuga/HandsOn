@@ -730,5 +730,3 @@ done
 2. Aquest **RAID5** estarà dedicat a l'emmagatzematge de dades, sense permisos per executar programes, permetent únicament llegir i escriure fitxers.
 3. Crea l'usuari chuck i estableix la seva quota d'emmagatzematge en 50MB.
 4. Utilitza LUKS per xifrar les particions utilitzades en el RAID5.
-
-Per optar al 10 en aquests reptes, documenteu les vostres accions utilitzant format markdown en aquest fitxer i feu una **pull request** al repositori original.
