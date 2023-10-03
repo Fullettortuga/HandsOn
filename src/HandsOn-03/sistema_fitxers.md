@@ -487,6 +487,8 @@ touch /home/adria/config/.vim
       ```
 
       ```shell
+      # NO FEU COM L'ALEX QUE HA COPIAT DIRECTAMENT EL UUID 
+      # POSAR EL VOSTRE UUID OBTINGUT AL PAS 8
       UUID=ebb60-88a0-4b37-ae47-a66baa1bb966 /home   xfs   nodev noexec   0   2
       ```
 
