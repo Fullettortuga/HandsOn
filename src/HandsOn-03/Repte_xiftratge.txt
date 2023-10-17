@@ -1,0 +1,36 @@
+                                                --Reptes--
+                                            --Eines de xifratge--
+
+Investigeu i documenteu com afegir un fitxer clau per desxifrar el disc i que es faci l'automount 
+sense demanar la contrasenya.
+
+
+--- Passos per Configurar el Muntatge Automàtic amb una Clau a Rocky Linux ---
+
+1. Generar una Clau Aleatòria:
+   Podeu generar una clau aleatòria utilitzant la següent comanda (ajusteu la ubicació i la mida segons les vostres necessitats):
+
+   dd if=/dev/urandom of=/root/mykeyfile bs=1024 count=4
+
+2. Afegir la Clau al Dispositiu LUKS:
+   Utilitzeu la següent comanda per afegir la clau generada al dispositiu LUKS (ajusteu el nom del dispositiu i la ubicació del fitxer de clau segons correspongui):
+
+   cryptsetup luksAddKey /dev/vdb /root/mykeyfile
+
+3. Modificar l'Arxiu /etc/crypttab:
+   Editeu l'arxiu `/etc/crypttab` perquè utilitzi la clau del fitxer en lloc de demanar una contrasenya. Assegureu-vos que la línia corresponent tingui el següent format:
+
+   privateDisk /dev/vdb /root/mykeyfile luks
+
+4. Actualitzar l'Initramfs:
+   Per assegurar-vos que el sistema pugui utilitzar la nova configuració de la clau, executeu la següent comanda per actualitzar l'initramfs:
+
+   dracut -f
+
+5. Reiniciar el Sistema:
+   Un cop hàgiu realitzat aquests canvis, reinicieu el sistema perquè s'apliquin. 
+   El disc hauria de muntar-se automàticament sense demanar una contrasenya, ja que utilitzarà la clau del fitxer.
+
+Assegureu-vos de mantenir el fitxer de clau en un lloc segur, ja que proporciona accés al disc sense necessitat 
+de la contrasenya. Aquests passos us permetran habilitar el muntatge automàtic d'un disc a Rocky Linux utilitzant 
+una clau en lloc d'una contrasenya.
